@@ -1,0 +1,20 @@
+.header{
+
+    height: 75px;
+    background-color: #1C2B35;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.logo{
+    width: 5%;
+    margin-top: 14px;
+    margin-left: 20px;
+}
+.navhead a{
+    padding: 6px;
+    margin-right: 40px;
+    color: white;
+    text-decoration: none;
+    font-size:18px;
+}
