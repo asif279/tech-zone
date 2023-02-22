@@ -1,19 +1,20 @@
 import React,{useState,useEffect} from 'react';
+import { useLoaderData } from 'react-router-dom';
 import { addToDb, getCart } from '../../utilities/fakedb';
 import Cart from '../Cart/Cart';
 import Product from '../Product/Product';
 import './Shop.css';
 
 const Shop = () => {
-    const [products,setProducts]= useState([])
+  const products=useLoaderData();
     const [cart,setCart]=useState([]);
 
-    useEffect(()=>{
-  fetch('products.json')//fetch('https://jsonplaceholder.typicode.com/users')
-  .then(res=>res.json())
-  .then(data=>setProducts(data))
+  //   useEffect(()=>{
+  // fetch('products.json')//fetch('https://jsonplaceholder.typicode.com/users')
+  // .then(res=>res.json())
+  // .then(data=>setProducts(data))
 
-    } ,[])
+  //   } ,[])
 
     useEffect(()=>{
       const storeCart=getCart();
