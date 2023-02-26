@@ -15,14 +15,16 @@ function App() {
     element:<Main/>,
     children:[{
        path:'/shop',
-       loader:productandCartloader,
+       loader:()=>fetch('products.json'),
        element:<Shop/>
+       
+       
 
     },
    
     {
       path:'/order',
-      loader:()=>fetch('products.json'),
+      loader:productandCartloader,
       element:<Order/>
     },
     {

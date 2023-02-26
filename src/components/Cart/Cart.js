@@ -12,7 +12,7 @@ const Cart = ({cart}) => {
     
     for(const product of cart){
         quantity=quantity +product.quantity;
-        console.log(quantity)
+        //console.log(quantity)
         total=parseFloat((total+product.price *product.quantity).toFixed(2));
        
 

@@ -3,11 +3,20 @@ import { getCart } from "../utilities/fakedb";
 
 export const productandCartloader = async() => {
     const productData= await fetch('products.json');
-    const products= productData.json();
+    const products=await productData.json();
    
     const saveCart= getCart();
-    console.log(saveCart);
-
-    return products;
+    const previousCart=[];
+   // console.log(saveCart);
+  for (const key in saveCart) {
+   // console.log(key);
+   const addProduct= products.find(product=>product.key ===key);
+   if(addProduct){
+    const quantity=saveCart[key];
+    addProduct.quantity=quantity;
+    previousCart.push(addProduct);
+   }
+  }
+    return {products:products,previousCart:previousCart };
 };
 
