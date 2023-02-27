@@ -1,9 +1,11 @@
-import React, { useState } from 'react';
+import React, { useContext, useState } from 'react';
 import { Link } from 'react-router-dom';
+import { AuthContext } from '../../contexts/UserContext';
 import './SignUp.css'
 
 const SignUp = () => {
     const [erorr,setError]=useState(null);
+    const {createUser} =useContext(AuthContext);
 
   const handleSubmit =(event)=>{
     event.preventDefault();
@@ -21,6 +23,14 @@ const SignUp = () => {
         setError("Your Password Didn't match ");
         return;
     }
+
+    createUser(email,password)
+    .then(res=>{
+        const user= res.user;
+        console.log(user);
+        form.reset();
+    })
+    .catch(error=>console.error(erorr))
 
   }
 

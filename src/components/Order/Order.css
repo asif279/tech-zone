@@ -1,0 +1,9 @@
+.shipment-btn{
+    border-radius: 6px;
+    border: 1px solid gray;
+    color: white;
+    background-color: orange;
+    margin: 5px;
+    padding: 5px;
+    width: 170px; 
+}

@@ -8,6 +8,8 @@ import { productandCartloader } from './loaders/productandCartloader';
 import ErrorPage from './components/ErrorPage/ErrorPage.JS';
 import Login from './components/Login/Login';
 import SignUp from './components/SignUp/SignUp';
+import Shipping from './components/Shipping/Shipping';
+import PrivateRoute from './routes/PrivateRoute';
 
 
 
@@ -31,8 +33,12 @@ function App() {
       element:<Order/>
     },
     {
+      path:"/shipping",
+      element:<PrivateRoute><Shipping/></PrivateRoute>
+    },
+    {
       path:'/inventory',
-      element:<Inventory/>
+      element:<PrivateRoute><Inventory/></PrivateRoute>
     },
     {
       path:'/login',
