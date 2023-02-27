@@ -5,6 +5,9 @@ import Shop from './components/Shop/Shop';
 import Order from './components/Order/Order';
 import Inventory from './components/Inventory/Inventory';
 import { productandCartloader } from './loaders/productandCartloader';
+import ErrorPage from './components/ErrorPage/ErrorPage.JS';
+import Login from './components/Login/Login';
+import SignUp from './components/SignUp/SignUp';
 
 
 
@@ -30,6 +33,14 @@ function App() {
     {
       path:'/inventory',
       element:<Inventory/>
+    },
+    {
+      path:'/login',
+      element:<Login/>
+    },
+    {
+      path:'/signup',
+      element:<SignUp/>
     }
   ]
    

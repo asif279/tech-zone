@@ -1,6 +1,6 @@
 import React,{useState,useEffect} from 'react';
-import { useLoaderData } from 'react-router-dom';
-import { addToDb, getCart } from '../../utilities/fakedb';
+import { Link, useLoaderData } from 'react-router-dom';
+import { addToDb, deleteShoppingCart, getCart } from '../../utilities/fakedb';
 import Cart from '../Cart/Cart';
 import Product from '../Product/Product';
 import './Shop.css';
@@ -8,6 +8,11 @@ import './Shop.css';
 const Shop = () => {
   const products=useLoaderData();
     const [cart,setCart]=useState([]);
+
+    const clearCart =()=>{
+      setCart([]);
+      deleteShoppingCart();
+    }
 
   //   useEffect(()=>{
   // fetch('products.json')//fetch('https://jsonplaceholder.typicode.com/users')
@@ -65,7 +70,12 @@ const Shop = () => {
 
             </div>
             <div className="cart-container">
-              <Cart cart={cart}/>
+              <Cart clearCart={clearCart} cart={cart}>
+
+                <Link to="/order">
+                  <button className='review-btn'>Review Order</button>
+                </Link>
+             </Cart>
             </div>
         </div>
     );
