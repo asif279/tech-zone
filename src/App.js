@@ -20,7 +20,7 @@ function App() {
     element:<Main/>,
     children:[{
        path:'/shop',
-       loader:()=>fetch('products.json'),
+       loader:()=>fetch('http://localhost:5000/data'),
        element:<Shop/>
        
        
