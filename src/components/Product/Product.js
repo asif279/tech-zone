@@ -22,7 +22,7 @@ const Product = (props) => {
          
        
          </Link>
-          <p>Price: {price}$</p>
+          <p>Price: <span>{price}$</span></p>
          
          </div>
 
