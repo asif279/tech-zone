@@ -6,7 +6,7 @@ export const AuthContext = createContext();
 const auth =getAuth(app);
 
 
-const user={email:'abc'};
+//const user={email:'abc'};
 
 
 const UserContext = ({children}) => {

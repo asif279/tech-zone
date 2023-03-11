@@ -6,7 +6,7 @@ import ItemReview from '../ItemReview/ItemReview';
 import './Order.css';
 
 const Order = () => {
-  const {products,previousCart}= useLoaderData();
+  const {previousCart}= useLoaderData();
   const [cart,setCart] =useState(previousCart);
  // console.log(cart);
  const handleRemove=(key)=>{
