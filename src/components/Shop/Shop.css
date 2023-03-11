@@ -12,15 +12,15 @@
 
 }
 .cart-container{
-    background-color: skyblue;
+    background-color: white;
    
 }
 .review-btn{
-    border-radius: 6px;
+    border-radius: 9px;
     border: 1px solid gray;
     color: white;
     background-color: orange;
     margin: 5px;
-    padding: 5px;
-    width: 120px;
+    padding: 8px;
+    width: 170px;
 }

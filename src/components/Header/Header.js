@@ -18,7 +18,7 @@ const Header = () => {
 
             {
     user?.uid ?
-    <button onClick={logOut
+    <button className='logout' onClick={logOut
     }>Log Out</button>
     :
     <>

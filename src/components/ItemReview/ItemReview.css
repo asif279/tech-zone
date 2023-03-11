@@ -9,7 +9,7 @@
 }
 .review-item{
     display: flex;
-    border: 1px solid #95A0A7;
+    border: 1px solid whitesmoke;
     width: 591px;
     margin: 21px auto;
     padding: 8px;
@@ -23,15 +23,20 @@
     height: 55px;
     border-radius: 50%;
     border: 0;
-    background-color: rgba(235, 87, 87, 0.3);
+    background-color: whitesmoke;
 }
 .but-delete:hover{
     background-color: black;
     cursor: pointer;
 }
+.pname{
+    color: black;
+    text-decoration: none;
+    font-weight: 500;
+}
 .delete-icon{
     font-size: 31px;
-    color: green;
+    color: orange;
 
 }
 .review-detail h3{

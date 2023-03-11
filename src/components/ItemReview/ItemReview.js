@@ -1,6 +1,7 @@
 import { faTrashAlt } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React from 'react';
+import { Link } from 'react-router-dom';
 import './ItemReview.css';
 
 const ItemReview = ({product,handleRemove}) => {
@@ -13,7 +14,10 @@ const ItemReview = ({product,handleRemove}) => {
         </div>
         <div className="review-detail-container">
         <div className="review-detail">
-        <h3>{name}</h3>
+        <Link to="/itemdetails"  className='pname'>{name}
+         
+       
+         </Link>
         <p><small>Price:{price}</small></p>
         <p><small>Shipping:{shipping}</small></p>
         <p><small>Quantity:{quantity}</small></p>

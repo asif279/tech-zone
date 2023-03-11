@@ -1,14 +1,17 @@
 .product img{
-    width: 250px;
-   height: 180px;
+    width: 200px;
+   height: 140px;
    border-radius: 8px;
    margin: 7px;
+   display: block;
    text-align: center;
+   align-items: center;
+
    
 }
 .product{
     width: 300px;
-    height: 420px;
+    height: 370px;
     border: 1px solid rgb(254, 254, 254);
     border-radius: 8px;
     position: relative;
@@ -22,6 +25,7 @@
         font-size: 16px;
         line-height: 10px;
         margin-top: 7px;
+        text-align: center;
         text-decoration: none;
         color: rgb(134, 134, 134);
 
@@ -47,7 +51,7 @@
     width: 50%;
     display: block;
     background: rgb(211, 173, 98);
-    color: white;
+    color: black;
     border: none;
     border-radius: 28px ;
     position: absolute;
