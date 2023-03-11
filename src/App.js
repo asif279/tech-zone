@@ -10,6 +10,7 @@ import Login from './components/Login/Login';
 import SignUp from './components/SignUp/SignUp';
 import Shipping from './components/Shipping/Shipping';
 import PrivateRoute from './routes/PrivateRoute';
+import ItemDetails from './components/ItemDetails/ItemDetails';
 
 
 
@@ -43,6 +44,10 @@ function App() {
     {
       path:'/login',
       element:<Login/>
+    },
+    {
+      path:'/itemdetails',
+      element:<ItemDetails/>
     },
     {
       path:'/signup',

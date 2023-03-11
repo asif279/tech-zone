@@ -50,7 +50,7 @@ const Login = () => {
 <input className='btn-submit' type="submit" value="Login" />
 
         </form>
-        <p>New to TechZone <Link to="/signup">Create New Account</Link></p>
+        <p>New to TechZone ?<Link to="/signup">Create New Account</Link></p>
             
         </div>
     );
