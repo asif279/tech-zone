@@ -57,3 +57,11 @@ margin-top: 10px;
 .btn-submit:hover{
     background: rgba(255, 153, 0, 0.7);
 }
+.newuser{
+    text-decoration: none;
+    color: black;
+}
+.newuser:hover{
+    font-weight: 650;
+    color: orange;
+}

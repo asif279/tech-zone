@@ -32,7 +32,7 @@ const clearCart =()=>{
         ></ItemReview>)
       }
       {
-        cart.length === 0 && <h2>No Item for Review .Plase <Link to="/shop">Shop </Link>more</h2>
+        cart.length === 0 && <h3>No Item for Review .Plase <Link className='noitem' to="/shop">Shop </Link>more</h3>
       }
     
 

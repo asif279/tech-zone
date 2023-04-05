@@ -4,10 +4,10 @@ import { AuthContext } from '../../contexts/UserContext';
 import './Login.css';
 
 const Login = () => {
-    const {SignIn}=useContext(AuthContext);
+    const {SignIn,signInGoogle}=useContext(AuthContext);
     const navigate = useNavigate();
     const location=useLocation();
-    const from=location.state?.from?.pathname || '/';
+    const from=location.state?.from?.pathname || '/shop';
 
 
 
@@ -31,7 +31,24 @@ const Login = () => {
         .catch(error=>console.error(error));
 
 
-    }
+    };
+
+    const handleGoogle =()=>{
+        signInGoogle()
+        .then(res=>{
+          const user=res.user;
+          console.log(user);
+          navigate(from,{replace:true})
+        })
+        .catch((error) => {
+        
+          const errorMessage = error.message;
+          //setLoginerror(errorMessage);
+          console.log(errorMessage);
+          
+        });
+      }
+
     
     return (
         <div className='form-container'>
@@ -50,7 +67,9 @@ const Login = () => {
 <input className='btn-submit' type="submit" value="Login" />
 
         </form>
-        <p>New to TechZone ?<Link to="/signup">Create New Account</Link></p>
+        <p>New to TechZone ?<Link className='newuser' to="/signup">Create New Account</Link></p>
+
+        <button  onClick={handleGoogle} className='btn-submit btn-outline w-full'>CONTINUE WITH GOOGLE</button>
             
         </div>
     );

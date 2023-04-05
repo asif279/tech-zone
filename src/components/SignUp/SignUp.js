@@ -1,14 +1,23 @@
 import React, { useContext, useState } from 'react';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../contexts/UserContext';
-import './SignUp.css'
+
+import './SignUp.css';
+
 
 const SignUp = () => {
     const [erorr,setError]=useState(null);
-    const {createUser} =useContext(AuthContext);
+    const {createUser,signInGoogle} =useContext(AuthContext);
     const navigate = useNavigate();
     const location=useLocation();
-    const from=location.state?.from?.pathname || '/login';
+    const from=location.state?.from?.pathname || '/shop';
+
+    
+
+
+
+
+  
 
   const handleSubmit =(event)=>{
     event.preventDefault();
@@ -36,6 +45,22 @@ const SignUp = () => {
     })
     .catch(error=>console.error(erorr))
 
+  };
+
+  const handleGoogle =()=>{
+    signInGoogle()
+    .then(res=>{
+      const user=res.user;
+      console.log(user);
+      navigate(from,{replace:true})
+    })
+    .catch((error) => {
+    
+      const errorMessage = error.message;
+      //setLoginerror(errorMessage);
+      console.log(errorMessage);
+      
+    });
   }
 
 
@@ -60,10 +85,16 @@ const SignUp = () => {
 <input className='btn-submit' type="submit" value="Sign Up" />
 
         </form>
-        <p>Already Have Account? <Link to="/login">Login</Link></p>
+        <p>Already Have Account? <Link className='newuser' to="/login">Login</Link></p>
         <p className='text-error'>{erorr}</p>
+
+        <button  onClick={handleGoogle} className='btn-submit btn-outline w-full'>CONTINUE WITH GOOGLE</button>
+
+      
             
         </div>
+
+      
     );
 };
 

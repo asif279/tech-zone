@@ -1,10 +1,15 @@
 import { faShoppingCart } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
+
 import './Product.css'
 
 const Product = (props) => {
+    const [data,setData]=useState(false);
+    const handleClick = () => {
+        setData(!data)
+    }
    
     const {name,price,img}=props.product;
     const {handleCart,product}=props;
@@ -18,10 +23,17 @@ const Product = (props) => {
   
          
          <div className="product-info">
-         <Link to="/itemdetails"  className='product-name'>{name}
-         
-       
+        
+            
+        
+
+                <Link to="/itemdetails" onClick={handleClick}  className='product-name'>{name}
          </Link>
+
+       
+
+
+       
           <p>Price: <span>{price}$</span></p>
          
          </div>

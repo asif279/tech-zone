@@ -6,4 +6,10 @@
     margin: 5px;
     padding: 8px;
     width: 170px; 
+    cursor: pointer;
+}
+.noitem{
+    cursor: pointer;
+    text-decoration: none;
+    font-size: 25px;
 }

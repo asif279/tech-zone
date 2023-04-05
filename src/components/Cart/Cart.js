@@ -29,12 +29,12 @@ const Cart = ({cart,clearCart,children}) => {
     return (
         <div className='cart-info'>
             <h3>Order Summary</h3>
-               <p>Selected Items:<span>{quantity}</span></p> 
-               <p>Price:<span>{total}$</span></p>
-               <p>Shipping:<span>{shipping}$</span></p>
-               <p>Tax:<span>{tax}$</span></p>
+               <p>Items: <span>{quantity}</span></p> 
+               <p>Price: <span>{total}$</span></p>
+               <p>Shipping: <span>{shipping}$</span></p>
+               <p>Tax: <span>{tax}$</span></p>
             
-               <h4>Total Bill:<span>{grandtotal}</span></h4>
+               <h4>Total Bill: <span>{grandtotal}</span></h4>
                <button className='clear-btn' onClick={clearCart}>Clear Cart</button><br/>
                {children}
         </div>

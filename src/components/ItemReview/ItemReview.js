@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 import './ItemReview.css';
 
 const ItemReview = ({product,handleRemove}) => {
-    const {key,img,name,price,quantity,shipping}=product;
+    const {key,img,name,price,quantity}=product;
     return (
        <div className="review-item">
          <div>
@@ -19,7 +19,7 @@ const ItemReview = ({product,handleRemove}) => {
        
          </Link>
         <p><small>Price:{price}</small></p>
-        <p><small>Shipping:{shipping}</small></p>
+       
         <p><small>Quantity:{quantity}</small></p>
 
         </div>
