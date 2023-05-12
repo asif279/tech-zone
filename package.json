@@ -1,0 +1,19 @@
+{
+  "name": "tech-zone",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/asif279/tech-zone.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/asif279/tech-zone/issues"
+  },
+  "homepage": "https://github.com/asif279/tech-zone#readme"
+}
