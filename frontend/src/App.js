@@ -1,5 +1,6 @@
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import './App.css';
+import 'bootstrap/dist/css/bootstrap.min.css';
 import Main from './layouts/Main';
 import Shop from './components/Shop/Shop';
 import Order from './components/Order/Order';
@@ -9,6 +10,8 @@ import Login from './components/Login/Login';
 import SignUp from './components/SignUp/SignUp';
 import Shipping from './components/Shipping/Shipping';
 import PrivateRoute from './routes/PrivateRoute';
+import Payment from './components/Payment/Payment';
+import HomeSlider from './components/HomeSlider/HomeSlider';
 
 
 
@@ -19,13 +22,21 @@ function App() {
     path:'/',
     element:<Main/>,
     children:[{
-       path:'/shop',
-       loader:()=>fetch('http://localhost:5000/data'),
-       element:<Shop/>
+       path:'/',
+       //loader:()=>fetch('http://localhost:5000/data'),
+       element:<HomeSlider/>
        
        
 
     },
+       
+{
+  path:'/shop',
+  loader:()=>fetch('http://localhost:5000/data'),
+  element:<Shop/>
+  
+
+},
    
     {
       path:'/order',
@@ -41,6 +52,10 @@ function App() {
       element:<PrivateRoute><Inventory/></PrivateRoute>
     },
     {
+      path:"/payment",
+      element:<PrivateRoute><Payment/></PrivateRoute>
+    },
+    {
       path:'/login',
       element:<Login/>
     },
@@ -48,15 +63,33 @@ function App() {
     {
       path:'/signup',
       element:<SignUp/>
+    },
+    {
+      path:'/homeslider',
+      element:<HomeSlider/>
     }
   ]
    
 }])
   return (
     <div className="">
+
+  
+    
       
     <RouterProvider router={router
-    }></RouterProvider>
+    }>
+
+<HomeSlider/>
+
+    </RouterProvider>
+    
+
+   
+   
+   
+
+
     
     </div>
   );

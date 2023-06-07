@@ -41,9 +41,10 @@ const clearCart =()=>{
       <div className="cart-container">
        <Cart clearCart={clearCart} cart={cart}>
 
-<Link to="/shipping">
-  <button className='shipment-btn'>Proceed CheckOut</button>
+<Link to="/shipping" >
+  <button  className='shipment-btn'>Proceed CheckOut</button>
 </Link>
+
         </Cart>
       </div>
   </div>

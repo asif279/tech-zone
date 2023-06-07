@@ -65,6 +65,7 @@
  }
  .btn-cart .text{
  margin-right: 5px;
+ margin-bottom: 5px;
  }
  .btn-cart:hover{
     background: gray;

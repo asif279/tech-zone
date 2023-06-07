@@ -17,12 +17,18 @@
     font-size: 15px;
 }
 .clear-btn{
-    border-radius: 9px;
-    border: 1px solid gray;
+   
+        border-radius: 9px;
+        border: 1px solid gray;
+        color: white;
+        background-color: orange;
+        margin: 4px;
+        padding: 5px;
+        width: 160px; 
+        cursor: pointer;
+    
+}
+.clear-btn:hover{
+    background-color: black;
     color: white;
-    background-color: orange;
-    margin: 5px;
-    padding: 8px;
-    width: 170px;
-    cursor: pointer;
 }

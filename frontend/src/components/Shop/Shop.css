@@ -20,8 +20,12 @@
     border: 1px solid gray;
     color: white;
     background-color: orange;
-    margin: 5px;
-    padding: 8px;
-    width: 170px;
+    margin: 4px;
+    padding: 5px;
+    width: 160px; 
     cursor: pointer;
+}
+.review-btn:hover{
+    background-color: black;
+    color: white;
 }

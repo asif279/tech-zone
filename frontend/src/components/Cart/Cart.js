@@ -1,7 +1,12 @@
 import React from 'react';
 import './Cart.css'
 
+
+
+
+
 const Cart = ({cart,clearCart,children}) => {
+  
     let total=0;
     let shipping=0;
     let tax=0;
@@ -36,7 +41,10 @@ const Cart = ({cart,clearCart,children}) => {
             
                <h4>Total Bill: <span>{grandtotal}</span></h4>
                <button className='clear-btn' onClick={clearCart}>Clear Cart</button><br/>
-               {children}
+               {children }
+              
+         
+             
         </div>
     );
 };

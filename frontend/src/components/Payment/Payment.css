@@ -1,0 +1,22 @@
+.bu{
+    margin-left: 600px;
+    background: black;
+    color: whitesmoke;
+}
+.bu:hover{
+    background: powderblue;
+    color: brown;
+
+}
+.ss{
+    margin-left: 170px;
+    font-weight: 800;
+}
+.gg{
+    background: powderblue;
+}
+.bn{
+    margin-right: 200px;
+    background: black;
+    color: whitesmoke;
+}

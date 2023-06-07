@@ -56,6 +56,7 @@ const Shop = () => {
         addToDb(product.key);
     }
     return (
+  
         <div className='shop-container'>
             <div className="products-container">
            {

@@ -1,4 +1,9 @@
-.shipment-btn{
+.kk{
+    background: paleturquoise;
+    margin: 10px;
+    padding: 10px;
+}
+.check{
     border-radius: 9px;
     border: 1px solid gray;
     color: white;
@@ -8,12 +13,7 @@
     width: 160px; 
     cursor: pointer;
 }
-.shipment-btn:hover{
-    background-color: black;
-    color: white;
-}
-.noitem{
-    cursor: pointer;
-    text-decoration: none;
-    font-size: 25px;
+.check:hover{
+    background: transparent;
+    color: black;
 }

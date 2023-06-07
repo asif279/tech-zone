@@ -38,9 +38,12 @@ const Product = (props) => {
          
          </div>
 
-         <button onClick={()=>handleCart(product)} className='btn-cart'>
-            <p className='text'>Add to Cart</p>
+         <button onClick={()=>handleCart(product)} className='btn-cart
+         '>
+           <div className=' d-flex align-items-center justify-content-center h-100'>
+           <p className='text  '>Add to Cart</p>
             <FontAwesomeIcon icon={faShoppingCart}></FontAwesomeIcon>
+           </div>
          </button>
          
         

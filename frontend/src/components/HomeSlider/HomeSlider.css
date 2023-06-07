@@ -1,0 +1,10 @@
+.bb{
+    position: relative;
+}
+
+.shop-btn{
+    position:absolute;
+    top: 400px;
+    right: 300px;
+}
+

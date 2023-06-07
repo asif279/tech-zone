@@ -9,7 +9,8 @@ const Header = () => {
     const {user,logOut}=useContext(AuthContext)
     return (
         <nav className='header'>
-            <img className='logo' src={TechZone} alt="" />
+        <Link to="/shop">  <img className='logo' src={TechZone} alt="" /></Link>
+           
             <div className='navhead'>
             <Link to='/shop'>Shop</Link>
             <Link to="/order">Order</Link>
@@ -19,7 +20,8 @@ const Header = () => {
             {
     user?.uid ?
     <button className='logout' onClick={logOut
-    }>Log Out</button>
+    }>{user.displayName
+}</button>
     :
     <>
                 <Link to="/login">Login</Link>
